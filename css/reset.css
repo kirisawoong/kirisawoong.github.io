@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: 'MaruBuri-Bold';
+	src: url(../font/MaruBuri-Bold.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: 'MaruBuri-Regular';
+	src: url(../font/MaruBuri-Regular.ttf) format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/*
+@font-face {
+	font-family: 'NanumBarunGothicBold';
+	src: url(../font/NanumBarunGothicBold.eot);
+	src: url(../font/NanumBarunGothicBold.eot?#iefix) format('embedded-opentype'),
+		url(../font/NanumBarunGothicBold.woff) format('woff'),
+		url(../font/NanumBarunGothicBold.ttf) format('truetype');
+}
+*/
+
+/* Type Selector */
+* {-webkit-text-size-adjust:none;}
+html,body {width:100%; height:100%; margin:0; padding:0; font-size:100%;}
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {margin:0; padding:0;}
+body {font-weight:400; font-family:'MaruBuri-Bold', dotum, '돋움', sans-serif; font-size:1em; color:#363636;}
+button, input[type=submit], input[type=reset], input[type=button] {overflow:visible; cursor:pointer;}
+input, select, textarea, button {font-family:'MaruBuri-Bold', dotum, '돋움', sans-serif; font-size:100%; border-radius:0; -webkit-appearance:none;}
+input[type=checkbox] {-webkit-appearance:checkbox;}
+li {list-style:none;}
+img, fieldset {border:none; vertical-align:top;}
+hr, legend {display:none;}
+em, address, cite {font-style:normal;}
+button:focus {outline:none;}
+a, button {
+	-webkit-transition: background-color .25s ease-out, color .25s ease-out;
+	-moz-transition: background-color .25s ease-out, color .25s ease-out;
+	-ms-transition: background-color .25s ease-out, color .25s ease-out;
+	transition: background-color .25s ease-out, color .25s ease-out;
+}
+a:link {text-decoration:none; color:#000}
+a:visited {text-decoration:none; color:#000}
+a:hover, a:focus {text-decoration:none;}
+a:active {text-decoration:none;}
+
+::selection {background:#c07074; color:#fff;}
+
+/* HTML5 Reset */
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption {display:block;}
+
+/* Accessibility Navigation */
+#accNav {position:absolute; top:0; left:0; z-index:1000; width:100%; height:0;}
+#accNav a {display:block; position:absolute; left:0; top:0; overflow:hidden; width:1px; height:1px; margin-left:-1px; margin-bottom:-1px; text-align:center; font-weight:bold; font-size:0.875em; color:#000; white-space:nowrap;}
+#accNav a:focus, #accNav a:hover, #accNav a:active {width:100%; height:auto; padding:10px 0; background:#000; color:#fff; z-index:1000;}
