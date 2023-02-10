@@ -12,8 +12,7 @@ h3 {margin-bottom:1.0em; font-size:1.5em;}
 .name .logos img {margin:0 10px;}
 .name .title {position:absolute; top:50%; left:50%; margin:0 0 0 -250px; opacity:0;}
 
-.avatar {margin-bottom:100px; text-align:center;}
-.avatar span {display:inline-block; width:140px; height:140px; box-shadow:1px 1px 3px #999; border-radius:5em; background:url(../img/kiris.jpg) no-repeat 0 0; background-size:100%;}
+.avatar {position:absolute; top:0; right:0; width:150px; height:150px; background:url(../img/kiris_triangle.png) no-repeat 0 0;}
 
 .intro_wrap {display:flex;}
 .intro_wrap .intro_box {flex:1; margin:0 20px; padding:50px; box-sizing:border-box; box-shadow:2px 2px 5px #d5d5d5; border-radius:20px; background:#fff; font-size:14px;}
