@@ -1,14 +1,16 @@
 @charset "utf-8";
-.name {font-family:'MaruBuri-Bold'; text-align:center;}
-.name h1 {font-size:2.0em;}
-.name .logos {margin-bottom:20px;}
-.name .logos img {margin:0 10px;}
 
 section {padding:8.0em 10.0em;}
 section p {margin:1.0em 0;}
 h2 {margin-bottom:1.0em; text-align:center; font-family:'MaruBuri-Bold'; font-size:2.0em;}
 h3 {margin-bottom:1.0em; font-size:1.5em;}
 
+.name {padding:0; font-family:'MaruBuri-Bold'; text-align:center;}
+.name h1 {font-size:2.0em;}
+.name .logos {position:absolute; top:-120px; left:50%; margin:0 0 0 -154px;}
+/*.name .logos {position:absolute; top:50%; left:50%; margin:-56px 0 0 -154px;}*/
+.name .logos img {margin:0 10px;}
+.name .title {position:absolute; top:50%; left:50%; margin:0 0 0 -250px; opacity:0;}
 
 .avatar {margin-bottom:100px; text-align:center;}
 .avatar span {display:inline-block; width:140px; height:140px; box-shadow:1px 1px 3px #999; border-radius:5em; background:url(../img/kiris.jpg) no-repeat 0 0; background-size:100%;}

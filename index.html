@@ -8,6 +8,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
@@ -16,13 +17,13 @@
 </head>
 <body>
 
-    <section id="scene1" class="name" style="background-color:#fff">
-        <div class="inner">            
-            <div class="logos">
-                <img src="img/html-black-logos.png" alt="" style="width:80px; height:auto;" />
-                <img src="img/css-black-logos.png" alt="" style="width:80px; height:auto;" />
-                <img src="img/js-black-logos.png" alt="" style="width:80px; height:auto;" />
-            </div>
+    <section id="scene1" class="name" style="width:100%; height:100%; background-color:#fff">
+        <div class="logos">
+            <img src="img/html-black-logos.png" alt="" class="html-logo" style="width:80px; height:auto;" />
+            <img src="img/css-black-logos.png" alt="" class="css-logo" style="width:80px; height:auto;" />
+            <img src="img/js-black-logos.png" alt="" class="js-logo" style="width:80px; height:auto;" />
+        </div>
+        <div class="title">
             <h1>UI DEVELOPER &amp; WEB PUBLISHER</h1>
             <strong>JEONGYOUJIN</strong>
         </div>
@@ -127,7 +128,7 @@
         </div>
     </section>
 
-    <section id="scene5" style="background-color: #fff;">
+    <section id="scene3" style="background-color: #fff;">
         <h2>PORTFOLIO</h2>
         <ul class="slide">
             <li>
@@ -253,7 +254,7 @@
         </ul>
     </section>
 
-    <section id="scene6" style="background-color:#fafafa">
+    <section id="scene4" style="background-color:#fafafa">
         <h2>RESUME &amp; PROJECT LIST</h2>
         <div class="list_wrap">
             <div class="tree_top"></div>
@@ -436,7 +437,7 @@
         </div>
     </section>
 
-    <section id="scene7" class="cantact" style="background-color:#000">
+    <section id="scene5" class="cantact" style="background-color:#000">
         <h2>CONTACT</h2>
         <ul>
             <li><a href="mailto:yjjeong.aw@gmail.com">yjjeong.aw@gmail.com</a></li>
@@ -447,73 +448,70 @@
 
     
     <script>
-        $(document).ready(function(){
+    $(document).ready(function(){
 
-            $('.slide').slick({
-  
-  infinite: false,
-  speed: 300,
-  slidesToShow: 4,
-  slidesToScroll: 4,
-  responsive: [
-    {
-      breakpoint: 1024,
-      settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        infinite: true,
-        dots: true
-      }
-    },
-    {
-      breakpoint: 600,
-      settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2
-      }
-    },
-    {
-      breakpoint: 480,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1
-      }
-    }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
-  ]
-});
-            /*var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 2,
-                spaceBetween: 30,
-                centeredSlides: true,
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });*/
+        var time = gsap.timeline();
 
-            /*
-            var controller = new ScrollMagic.Controller({
-                globalSceneOptions: {
-                    triggerHook: 'onLeave',
-                    duration: '100%'
+        time.to(".html-logo", {y:350});
+        time.to(".css-logo", {y:350});
+        time.to(".js-logo", {y:350});
+        time.to(".title", {opacity:1, duration:3});
+
+        $('.slide').slick({  
+            infinite: false,
+            speed: 300,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
                 }
-            });
-           
-            var slides = $("section[id^='scene']");
-            for(var i=0; i<slides.length; i++){
-                var scene = new ScrollMagic.Scene({
-                    triggerElement: slides[i]
-                })
-                .setPin(slides[i], {pushFollowers:true}) //setPin 되어있는 동안 다음 Section 요소가 밀려나도록 기본설정 되어있기 때문에 pushFollowers:false로 이를 비활성화 합니다.
-                .addTo(controller)
-                .addIndicators();
-            }
-            */
-        
+                },
+                {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+                },
+                {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
         });
+
+        /*
+        var controller = new ScrollMagic.Controller({
+            globalSceneOptions: {
+                triggerHook: 'onLeave',
+                duration: '100%'
+            }
+        });
+        
+        var slides = $("section[id^='scene']");
+        for(var i=0; i<slides.length; i++){
+            var scene = new ScrollMagic.Scene({
+                triggerElement: slides[i]
+            })
+            .setPin(slides[i], {pushFollowers:true}) //setPin 되어있는 동안 다음 Section 요소가 밀려나도록 기본설정 되어있기 때문에 pushFollowers:false로 이를 비활성화 합니다.
+            .addTo(controller)
+            .addIndicators();
+        }
+        */
+        
+    });
     </script>
 </body>
 </html>
