@@ -3,7 +3,8 @@
 section {box-sizing:border-box; padding:80px 50px;}
 section p {}
 h2 {margin-bottom:10px; text-align:center; font-family:'MaruBuri-Bold'; font-size:2.0em;}
-h3 {margin-bottom:1.0em; font-size:1.5em;}
+h3 {margin-bottom:10px; font-family:'MaruBuri-Bold'; font-size:1.5em;}
+
 
 .name {padding:0; font-family:'MaruBuri-Bold'; text-align:center;}
 .name h1 {font-size:2.0em;}
@@ -12,12 +13,14 @@ h3 {margin-bottom:1.0em; font-size:1.5em;}
 .name .logos img {margin:0 10px;}
 .name .title {position:absolute; top:50%; left:50%; margin:0 0 0 -250px; opacity:0;}
 
-.avatar {position:absolute; top:0; right:0; width:150px; height:150px; background:url(../img/kiris_triangle.png) no-repeat 0 0;}
+/*.avatar {position:absolute; top:0; right:0; width:150px; height:150px; background:url(../img/kiris_triangle.png) no-repeat 0 0;}*/
 
 .intro_wrap {display:flex;}
 .intro_wrap .intro_box {flex:1; margin:40px 30px; padding:40px; box-sizing:border-box; box-shadow:2px 2px 5px #d5d5d5; border-radius:20px; background:#fff; font-size:14px;}
+.intro_wrap .intro_box.avatar {background:url(../img/kiris.jpg) no-repeat 100% 100% #fff; background-size:150px auto;}
 
-.check {margin-bottom:10px; padding-left:25px; font-size:16px;}
+.basic {margin-bottom:10px;}
+.check {margin-bottom:10px; padding-left:25px; font-family:'MaruBuri-Bold'; font-size:16px;}
 .period {margin-bottom:10px;}
 .period strong {font-size:22px;}
 .period .belong {font-family:'MaruBuri-Regular'; font-size:12px; color:#888;}
@@ -42,6 +45,18 @@ h3 {margin-bottom:1.0em; font-size:1.5em;}
 
 a.newindow {margin-right:10px; padding-right:23px; background:url(../img/icon_new_window.png) no-repeat 100% -1px; background-size:20px 20px; font-family:'MaruBuri-Bold'; color:#e47372;} 
 a.newindow:hover {text-decoration:underline;}
+
+.cantact h2 {margin-bottom:50px; color:#fff;}
+.cantact ul {text-align:center;}
+.cantact ul li {display:inline-block; margin:0 10px;}
+.cantact ul li a {display:inline-block; width:50px; height:50px; text-indent:-999em;}
+.cantact ul li.email a {background:url(../img/icon_email.png) no-repeat 0 -4px; background-size:100% auto;}
+.cantact ul li.blog a {position:relative; background:url(../img/icon_naver_blog.png) no-repeat 0 0; background-size:100% auto;}
+.cantact ul li.blog a::after {opacity:0; position:absolute; top:14px; right:-260px; width:auto; text-indent:0; font-size:12px; color:#fff;
+    content:"웹퍼블리셔 블로그가 아닌 개인 블로그입니다.^^";
+}
+.cantact ul li.blog a:hover:after {opacity:1;}
+.cantact a:hover {text-decoration:underline;}
 
 /*.slide {position:relative;}
 .slide li {margin:0 5px; text-align:left;}
@@ -85,5 +100,3 @@ a.newindow:hover {text-decoration:underline;}
 .list_wrap .list_row .list_box ul {margin-bottom:15px;}
 .list_wrap .list_row .list_box ul li {font-size:14px;}*/
 
-.cantact h2 {color:#fff;}
-.cantact a {color:#fff;}
