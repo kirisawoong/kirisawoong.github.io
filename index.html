@@ -393,9 +393,9 @@
 
         var time = gsap.timeline();
 
-        time.to(".html-logo", {y:350});
-        time.to(".css-logo", {y:350, delay:0.5});
-        time.to(".js-logo", {y:350, delay:0.5});
+        time.to(".html-logo", {y:350, duration:0.4});
+        time.to(".css-logo", {y:350, duration:0.4});
+        time.to(".js-logo", {y:350, duration:0.4});
         time.to(".title", {opacity:1, duration:3});
 
         AOS.init({
