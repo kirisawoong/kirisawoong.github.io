@@ -19,11 +19,11 @@
 
     <section id="scene1" class="name" style="width:100%; height:100%; background-color:#fff">
         <div class="logos">
-            <img src="img/html-black-logos.png" alt="" class="html-logo" style="width:80px; height:auto;" />
-            <img src="img/css-black-logos.png" alt="" class="css-logo" style="width:80px; height:auto;" />
-            <img src="img/js-black-logos.png" alt="" class="js-logo" style="width:80px; height:auto;" />
+            <img src="img/html-black-logos.png" alt="" class="html-logo" style="width:80px; height:auto;" data-aos="fade-down" data-aos-delay="100" />
+            <img src="img/css-black-logos.png" alt="" class="css-logo" style="width:80px; height:auto;" data-aos="fade-down" data-aos-delay="300" />
+            <img src="img/js-black-logos.png" alt="" class="js-logo" style="width:80px; height:auto;" data-aos="fade-down" data-aos-delay="500" />
         </div>
-        <div class="title">
+        <div class="title" data-aos="fade-up" data-aos-delay="700">
             <h1>UI DEVELOPER &amp; WEB PUBLISHER</h1>
             <strong>JEONGYOUJIN</strong>
         </div>
@@ -190,6 +190,20 @@
     <section id="scene4" style="background-color:#fafafa">
         <h2>RESUME &amp; PORTFOLIO</h2>
         <div class="intro_wrap">
+            <div class="intro_box" data-aos="flip-down">
+                <p class="period">2023. 03. ~ <strong>현재</strong><br><span class="belong">(주)씽크버드 프리랜서</span></p>
+                <h4 class="check navy">코오롱몰 사이트 운영</h4>
+                <ul class="resume_list">
+                    <li>- 재택근무</li>
+                    <li>- 이벤트/기획전 신규 퍼블리싱</li>
+                    <li>
+                        - <a href="https://www.kolonmall.com/Special/230842?secretKey=b43756f4-fc14-4f68-aabe-e2f06d5e8b00" target="_blank" class="newindow">언다이드룸</a>
+                        - <a href="https://www.kolonmall.com/Special/230295?secretKey=52164479-c0fd-48ff-bfee-a0db6586502c"target="_blank" class="newindow">엠퀴리</a>
+                    </a></li>
+                </ul>                
+            </div>
+        </div>
+        <div class="intro_wrap">
             <div class="intro_box" data-aos="flip-up">
                 <p class="period">2022. 07. ~ <strong>2022</strong>. 12.<br><span class="belong">(주)아이와이씨앤씨 프리랜서</span></p>
                 <h4 class="check navy">CJ제일제당 그룹 사이트 운영 </h4>
@@ -242,7 +256,6 @@
             </div>
         </div>
         <div class="intro_wrap">
-
             <div class="intro_box" data-aos="flip-up">
                 <p class="period">2015. 07. ~ <strong>2016</strong>. 02.<br><span class="belong">(주)플립커뮤니케이션즈 프리랜서</span></p>
                 <h4 class="check navy">씨티은행 구축</h4>
@@ -391,13 +404,14 @@
     <script>
     $(document).ready(function(){
 
+        /*
         var time = gsap.timeline();
 
         time.to(".html-logo", {y:350, duration:0.4});
         time.to(".css-logo", {y:350, duration:0.4});
         time.to(".js-logo", {y:350, duration:0.4});
         time.to(".title", {opacity:1, duration:3});
-
+        */
         AOS.init({
             // Global settings
             disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
